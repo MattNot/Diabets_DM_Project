@@ -27,6 +27,9 @@ def dataNormalization(row):
         row['gender'] = 0
     elif row['gender'] == 'Female':
         row['gender'] = 1
+
+    if row['readmitted'] == '>30':
+        row['readmitted'] = 'NO'
     return row
 
 
